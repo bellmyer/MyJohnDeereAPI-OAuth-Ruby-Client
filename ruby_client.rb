@@ -9,7 +9,7 @@ API_SECRET = '9bca8e6293c7380db126c3a49c57ce53fe116474'
 
 def getBasicCatalog(token=nil)
 consumerForCatalog=OAuth::Consumer.new(API_KEY, API_SECRET)
-consumerForCatalog.request(:get, 'https://apicert.deere.com/platform/', token, {}, {'accept' => 'application/vnd.deere.axiom.v3+json'})
+consumerForCatalog.request(:get, 'https://apicert.soa-proxy.deere.com/platform/', token, {}, {'accept' => 'application/vnd.deere.axiom.v3+json'})
 end
 
 def setupLinksForOauth(catalog)
