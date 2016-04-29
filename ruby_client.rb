@@ -37,7 +37,7 @@ setupLinksForOauth(getBasicCatalog)
 
 consumer=OAuth::Consumer.new API_KEY,
 API_SECRET,
-{ :site => 'https://apicert.soa-proxy.deere.com/',
+{ :site => 'https://apicert.soa-proxy.deere.com',
 :header =>{:Accept =>'application/vnd.deere.axiom.v3+json'},
 :http_method => :get,
 :request_token_url=>@requestToken_uri,
@@ -62,7 +62,7 @@ access_token = request_token.get_access_token(:oauth_verifier=>verifier)
 puts "Access token received - #{access_token.token}"
 puts
 puts '***** Fetching user details: GET /users/{userName} *****'
-response = access_token.get('/users/SW31759',{ 'accept'=> 'application/vnd.deere.axiom.v3+json' })
+response = access_token.get('/platform/users/SW31759',{ 'accept'=> 'application/vnd.deere.axiom.v3+json' })
 puts
 puts 'JSON Response'
 puts response.body
