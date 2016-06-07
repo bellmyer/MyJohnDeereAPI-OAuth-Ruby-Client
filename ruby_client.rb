@@ -9,7 +9,7 @@ API_SECRET = ''#API_SECRET is the shared secret of your app created in develoepr
 
 def getBasicCatalog(token=nil)
 consumerForCatalog=OAuth::Consumer.new(API_KEY, API_SECRET)
-consumerForCatalog.request(:get, 'https://apicert.soa-proxy.deere.com/platform/', token, {}, {'accept' => 'application/vnd.deere.axiom.v3+json'})
+consumerForCatalog.request(:get, 'https://sandboxapi.deere.com/platform/', token, {}, {'accept' => 'application/vnd.deere.axiom.v3+json'})
 end
 
 def setupLinksForOauth(catalog)
