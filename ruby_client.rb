@@ -37,7 +37,7 @@ setupLinksForOauth(getBasicCatalog)
 
 consumer=OAuth::Consumer.new API_KEY,
 API_SECRET,
-{ :site => 'https://apicert.soa-proxy.deere.com',
+{ :site => 'https://sandboxapi.deere.com',
 :header =>{:Accept =>'application/vnd.deere.axiom.v3+json'},
 :http_method => :get,
 :request_token_url=>@requestToken_uri,
