@@ -61,8 +61,8 @@ puts '***** Fetching access token *****'
 access_token = request_token.get_access_token(:oauth_verifier=>verifier)
 puts "Access token received - #{access_token.token}"
 puts
-puts '***** Fetching user details: GET /users/{userName} *****'
-response = access_token.get('/platform/users/SW31759',{ 'accept'=> 'application/vnd.deere.axiom.v3+json' })
+puts '***** Fetching organizations: GET /organizations *****'
+response = access_token.get('/platform/organizations',{ 'accept'=> 'application/vnd.deere.axiom.v3+json' })
 puts
 puts 'JSON Response'
 puts response.body
