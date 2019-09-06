@@ -3,8 +3,8 @@
 require 'oauth'
 require 'json'
 
-API_KEY = ''#API_KEY is the App Id of your app created in develoepr.deere.com
-API_SECRET = ''#API_SECRET is the shared secret of your app created in develoepr.deere.com
+API_KEY = ''#API_KEY is the App Id of your app created in developer.deere.com
+API_SECRET = ''#API_SECRET is the shared secret of your app created in developer.deere.com
 
 
 def getBasicCatalog(token=nil)
